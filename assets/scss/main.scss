@@ -35,6 +35,20 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+
+.title_section {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    color: rgba(38, 38, 38, 1);
+}
+
+.subtitle_section {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: rgba(131, 131, 131, 1);
+}
 //=======================================================================
 .header {
     height: 140px;
@@ -86,17 +100,9 @@ body {
         text-align: center;
     }
     &__title {
-        font-weight: 600;
-        font-size: 48px;
-        line-height: 59px;
-        color: rgba(38, 38, 38, 1);
         margin: 0 0 14px 0;
     }
     &__subtitle {
-        font-weight: 300;
-        font-size: 24px;
-        line-height: 29px;
-        color: rgba(131, 131, 131, 1);
         margin: 0 0 20px 0;
     }
     &__options {
@@ -134,6 +140,63 @@ body {
             background: rgba(235, 235, 235, 1);
             border-radius: 10px;
             margin: 0 1px 0 0;
+        }
+    }
+}
+//=======================================================================
+.history {
+    padding: 101px 0 214px 0;
+    background: url('../img/history_bg_r2.png') right bottom/auto 529px no-repeat, url('../img/history_bg_r1.svg') right 26px bottom/auto 567px no-repeat, url('../img/history_bg_l.svg') -70px 0px/auto 100% no-repeat, url('../img/history_bg_m.svg') top 50% right 347px/auto 95% no-repeat;
+    // .history__head
+
+    &__head {
+        max-width: 530px;
+        margin: 0 0 140px;
+    }
+
+    // .history__title
+
+    &__title {
+        margin: 0 0 35px 0;
+    }
+
+    // .history__subtitle
+
+    &__subtitle {
+        margin: 0;
+    }
+
+    // .history__main
+
+    &__main {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    // .history__pic
+
+    &__pic {
+        flex: 0 0 222px;
+        margin: 0 4px 0 0;
+    }
+
+    // .history__text
+
+    &__text {
+        flex: 0 1 416px;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;
+        color: rgba(136, 136, 136, 1);
+        margin: 0 0 20px 0;
+        p:first-child {
+            max-width: 350px;
+        }
+        span {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+            color: rgba(38, 38, 38, 1);
         }
     }
 }
