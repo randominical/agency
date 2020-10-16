@@ -146,42 +146,26 @@ body {
 //=======================================================================
 .history {
     padding: 101px 0 214px 0;
-    background: url('../img/history_bg_r2.png') right bottom/auto 529px no-repeat, url('../img/history_bg_r1.svg') right 26px bottom/auto 567px no-repeat, url('../img/history_bg_l.svg') -70px 0px/auto 100% no-repeat, url('../img/history_bg_m.svg') top 50% right 347px/auto 95% no-repeat;
-    // .history__head
-
+    background: url('../img/history_bg_r2.png') right bottom/auto 529px no-repeat, url('../img/history_bg_r1.svg') right 26px bottom/auto 567px no-repeat, url('../img/history_bg_l.svg') left 0px/auto 100% no-repeat, url('../img/history_bg_m.svg') top 50% right 347px/auto 95% no-repeat;
     &__head {
         max-width: 530px;
-        margin: 0 0 140px;
+        margin: 0 0 140px 130px;
     }
-
-    // .history__title
-
     &__title {
         margin: 0 0 35px 0;
     }
-
-    // .history__subtitle
-
     &__subtitle {
         margin: 0;
     }
-
-    // .history__main
-
     &__main {
         display: flex;
         align-items: flex-end;
+        margin: 0 0 0 70px;
     }
-
-    // .history__pic
-
     &__pic {
         flex: 0 0 222px;
         margin: 0 4px 0 0;
     }
-
-    // .history__text
-
     &__text {
         flex: 0 1 416px;
         font-weight: 300;
@@ -197,6 +181,126 @@ body {
             font-size: 18px;
             line-height: 22px;
             color: rgba(38, 38, 38, 1);
+        }
+    }
+}
+//=======================================================================
+.gestalt {
+    padding: 65px 0 120px 0;
+    &__head {
+        margin: 0 0 46px 130px;
+        max-width: 869px;
+    }
+    &__title {
+        margin: 0 0 13px 0;
+    }
+    &__subtitle {
+        margin: 0;
+    }
+    &__main {
+        
+    }
+    &__text {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: rgba(38, 38, 38, 1);
+        margin: 0 0 30px 150px;
+    }
+    &__box {
+        background: url('../img/gestalt_bg_1.svg') 65% 0/259px auto no-repeat, url('../img/gestalt_bg_2.svg') 50% 363px/494.5px auto no-repeat, url('../img/gestalt_bg_3.svg') 35% 550px/565.5px auto no-repeat, url('../img/gestalt_bg_4.svg') 45% 750px/565.5px auto no-repeat;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 50px 0 0 0;
+    }
+    &__column {
+        &_1 {
+            padding: 100px 0 0 0;
+        }
+        &_2 {
+
+        }
+    }
+    &__pic {
+        width: 240px;
+        height: auto;
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 1;
+        }
+        &:before {
+            content: '';
+            width: 254px;
+            height: 295px;
+            position: absolute;
+            left: 0;
+        }
+        &_1 {
+            margin: 0 0 184px 0;
+            img {
+                left: -45px;
+            }
+            &:before {
+                background: rgba(208, 180, 150, 1);
+                top: 83px;
+            }
+        }
+        &_2 {
+            img {
+                bottom: 21px;
+            }
+            &:before {
+                background: rgba(249, 249, 249, 1);
+            }
+        }
+        &_3 {
+            margin: 0 0 219px 0;
+            img {
+                right: -50px;
+                bottom: -50px;
+            }
+            &:before {
+                background: rgba(249, 249, 249, 1);
+            }
+        }
+        &_4 {
+            img {
+                bottom: 26px;
+            }
+            &:before {
+                background: rgba(102, 170, 173, 1);
+            }
+        }
+    }
+    .pic {
+        &__lable {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+            color: rgba(38, 38, 38, 1);
+            position: absolute;
+            z-index: 1;
+            &_1 {
+                top: 90px;
+                right: -30px;
+            }
+            &_2 {
+                left: 50%;
+                top: -10px;
+                transform: translate(-50%, 0);
+            }
+            &_3 {
+                left: -43px;
+                top: 70px;
+            }
+            &_4 {
+                top: 23px;
+                right: -65px;
+            }
         }
     }
 }
