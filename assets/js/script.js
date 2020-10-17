@@ -13,6 +13,7 @@
         BtnUp.classList.remove('shown');
         }
     }
+    
     var BtnUp = document.querySelector('.up');
     window.addEventListener('scroll', trackScroll);
 })();
