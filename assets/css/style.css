@@ -754,6 +754,9 @@ body {
       padding: 20px;
       font-size: 20px;
       color: #505050; }
+      .like .form__input:focus {
+        -webkit-box-shadow: 0 0 7px #646464;
+                box-shadow: 0 0 7px #646464; }
     .like .form__button {
       -webkit-box-flex: 0;
           -ms-flex: 0 1 33.333%;
