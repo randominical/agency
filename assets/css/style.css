@@ -126,6 +126,13 @@ body {
   .up.shown {
     visibility: visible;
     opacity: 1; }
+  @media (max-width: 767.98px) {
+    .up__link {
+      width: 45px;
+      height: 45px; }
+    .up img {
+      width: 30px;
+      height: 30px; } }
 
 .header {
   height: 140px;
@@ -636,7 +643,7 @@ body {
         margin: 0 0 50px 0; } }
   @media (max-width: 767.98px) {
     .projects {
-      background: none;
+      background: #f9f9f9;
       padding: 25px 0 30px 0; }
       .projects__head {
         margin: 0 0 40px 0; }
@@ -692,10 +699,18 @@ body {
             flex: 0 1 300px; }
   .media__link {
     width: 100%;
-    height: auto; }
+    height: auto;
+    margin: 0 5px; }
     .media__link img {
       width: 100%;
       height: auto; }
+  @media (max-width: 991.98px) {
+    .media {
+      padding: 80px 0 80px 0; } }
+  @media (max-width: 767.98px) {
+    .media {
+      background: none;
+      padding: 40px 0 40px 0; } }
 
 .like {
   -webkit-box-flex: 0;
@@ -756,5 +771,50 @@ body {
         border: 3px solid #c39f79;
         background: white;
         color: #c39f79; }
+  @media (max-width: 991.98px) {
+    .like {
+      padding: 50px 0 127px 0; }
+      .like .form {
+        padding: 0 0 0 50px; }
+        .like .form__input {
+          height: 60px;
+          font-size: 18px; }
+        .like .form__button {
+          height: 60px; } }
+  @media (max-width: 767.98px) {
+    .like {
+      padding: 30px 0 127px 0;
+      background: none; }
+      .like__head {
+        margin: 0 0 30px 0; }
+      .like .form {
+        padding: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+        .like .form__item {
+          width: 80%;
+          margin: 0 0 10px 0; }
+        .like .form__lable {
+          font-size: 16px;
+          line-height: 18px; }
+        .like .form__input {
+          height: 50px;
+          font-size: 14px; }
+        .like .form__button {
+          width: 80%;
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 50px;
+                  flex: 0 0 50px;
+          margin-top: 30px;
+          font-size: 14px;
+          line-height: 18px; } }
 
 /*# sourceMappingURL=style.css.map */
