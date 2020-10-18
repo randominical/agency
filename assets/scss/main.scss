@@ -31,10 +31,38 @@ body {
     overflow: hidden;
 }
 
+.page {
+    position: absolute;
+    width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    width: 100%;
+    max-width: 1440px;
+	display: flex;
+	flex-direction: column;
+}
+
 .container {
     max-width: 1236px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.head_section {
+    padding: 0 0 0 130px;
+    @media (max-width: $md2 + px) {
+        padding: 0 0 0 50px;
+    }
+    @media (max-width: $md3 + px) {
+        padding: 0 0 0 30px;
+    }
 }
 
 .title_section {
@@ -60,6 +88,10 @@ body {
     @media (max-width: $md3 + px) {
         font-size: 18px;
         line-height: 22px;
+    }
+    @media (max-width: $md4 + px) {
+        font-size: 14px;
+        line-height: 16px;
     }
 }
 
@@ -104,6 +136,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 5;
     .container {
         height: 100%;
         display: flex;
@@ -179,13 +212,26 @@ body {
 }
 //=======================================================================
 .top {
-    height: 1024px;
-    padding: 180px 0 20px 0;
-    background: url('../img/top_bg.jpg') bottom/100% no-repeat;
+    flex: 1 0 100%;
+    max-height: 1370px;
+    padding: 180px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     &__content {
         max-width: 537px;
         margin: 0 auto;
         text-align: center;
+    }
+    &__bg {
+        width: 100%;
+        max-width: 1440px;
+        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
     &__title {
         margin: 0 0 14px 0;
@@ -231,12 +277,11 @@ body {
         }
     }
     @media (max-width: $md2 + px) {
-        height: 844px;
-        padding: 150px 0 20px 0;
+        max-height: 1030px;
+        padding: 150px 0 0 0;
     }
     @media (max-width: $md3 + px) {
-        height: 700px;
-        padding: 120px 0 20px 0;
+        padding: 120px 0 0 0;
         .options {
             &__item {
                 font-size: 14px;
@@ -260,12 +305,12 @@ body {
 }
 //=======================================================================
 .history {
+    flex: 0 0 auto;
     padding: 101px 0 214px 0;
     background: url('../img/history_bg_r2.png') right bottom/auto 529px no-repeat, url('../img/history_bg_r1.svg') right 26px bottom/auto 567px no-repeat, url('../img/history_bg_l.svg') left 0px/auto 100% no-repeat, url('../img/history_bg_m.svg') top 50% right 27%/auto 95% no-repeat;
     &__head {
         max-width: 530px;
         margin: 0 0 140px 0;
-        padding: 0 0 0 130px;
     }
     &__title {
         margin: 0 0 35px 0;
@@ -315,7 +360,6 @@ body {
         background: url('../img/history_bg_r2.png') right bottom/auto 400px no-repeat, url('../img/history_bg_r1.svg') right 20px bottom/auto 430px no-repeat, url('../img/history_bg_l.svg') left 0px/auto 100% no-repeat, url('../img/history_bg_m.svg') top 50% right 27%/auto 95% no-repeat;
         &__head {
             margin: 0 0 120px 0;
-            padding: 0 0 0 50px;
         }
         &__main {
             padding: 0 0 0 30px;
@@ -336,7 +380,6 @@ body {
         background: url('../img/history_bg_l.svg') left top 0/auto 100% no-repeat, url('../img/history_bg_m.svg') top 50% right 20%/auto 95% no-repeat;
         &__head {
             margin: 0 0 50px 0;
-            padding: 0 0 0 30px;
         }
         &__title {
             margin: 0 0 15px 0;
@@ -350,6 +393,7 @@ body {
         }
     }
     @media (max-width: $md4 + px) {
+        padding: 60px 0 30px 0;
         background: url('../img/history_bg_l.svg') left -200px top 0/auto 100% no-repeat, url('../img/history_bg_m.svg') top 50% right -80px/auto 95% no-repeat;
         &__main {
             flex-direction: column;
@@ -359,11 +403,11 @@ body {
 }
 //=======================================================================
 .gestalt {
+    flex: 0 0 auto;
     padding: 65px 0 120px 0;
     &__head {
         margin: 0 0 46px 0;
-        padding: 0 0 0 130px;
-        max-width: 869px;
+        max-width: 999px;
     }
     &__title {
         margin: 0 0 13px 0;
@@ -371,29 +415,28 @@ body {
     &__subtitle {
         margin: 0;
     }
-    &__main {
-        
-    }
     &__text {
         font-weight: bold;
         font-size: 18px;
         line-height: 22px;
         color: rgba(38, 38, 38, 1);
-        margin: 0 0 30px 150px;
+        margin: 0 0 30px 0;
+        padding: 0 0 0 150px;
     }
     &__box {
-        background: url('../img/gestalt_bg_1.svg') 65% 0/259px auto no-repeat, url('../img/gestalt_bg_2.svg') 50% 363px/494.5px auto no-repeat, url('../img/gestalt_bg_3.svg') 35% 550px/565.5px auto no-repeat, url('../img/gestalt_bg_4.svg') 45% 750px/565.5px auto no-repeat;
+        background: url('../img/gestalt_bg_1.svg') 65% 0/25% auto no-repeat, url('../img/gestalt_bg_2.svg') 50% 363px/45% auto no-repeat, url('../img/gestalt_bg_3.svg') 35% 550px/45% auto no-repeat, url('../img/gestalt_bg_4.svg') 45% 750px/45% auto no-repeat;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        padding: 50px 0 0 0;
+        padding: 50px 0 10px 0;
     }
     &__column {
+        flex: 0 0 auto;
         &_1 {
-            padding: 100px 0 0 0;
+            padding: 100px 0 0 20px;
         }
         &_2 {
-
+            padding: 0 70px 0 0;
         }
     }
     &__pic {
@@ -477,14 +520,111 @@ body {
             }
         }
     }
+    @media (max-width: $md2 + px) {
+        padding: 45px 0 70px 0;
+        &__text {
+            padding: 0 0 0 60px;
+        }
+        &__box {
+            background: url('../img/gestalt_bg_1.svg') 50% 0/25% auto no-repeat, url('../img/gestalt_bg_2.svg') 53% 340px/45% auto no-repeat, url('../img/gestalt_bg_3.svg') 40% 470px/45% auto no-repeat, url('../img/gestalt_bg_4.svg') 45% 650px/45% auto no-repeat;
+            padding: 30px 0 10px 0;
+        }
+        &__pic {
+            width: 200px;
+            &:before {
+                width: 200px;
+                height: 260px;
+            }
+            &_1 {
+                &:before {
+                    top: 66px;
+                }
+            }
+            &_3 {
+                img {
+                    right: -50px;
+                    bottom: -20px;
+                }
+            }
+        }
+    }
+    @media (max-width: $md3 + px) {
+        padding: 25px 0 30px 0;
+        &__box {
+            background: url('../img/gestalt_bg_1.svg') 40% 0/25% auto no-repeat, url('../img/gestalt_bg_2.svg') 57% 270px/45% auto no-repeat, url('../img/gestalt_bg_3.svg') 34% 400px/45% auto no-repeat, url('../img/gestalt_bg_4.svg') 45% 620px/45% auto no-repeat;
+        }
+        &__text {
+            padding: 0 0 0 30px;
+            margin: 0 0 15px 0;
+        }
+        &__column {
+            &_1 {
+                padding: 70px 0 0 20px;
+            }
+            &_2 {
+                padding: 0 45px 0 0;
+            }
+        }
+        &__pic {
+            width: 160px;
+            &:before {
+                width: 160px;
+                height: 210px;
+            }
+            &_1 {
+                &:before {
+                    top: 56px;
+                }
+            }
+            &_3 {
+                img {
+                    right: -20px;
+                    bottom: -10px;
+                }
+            }
+        }
+        .pic {
+            &__lable {
+                font-size: 14px;
+                line-height: 18px;
+                &_1 {
+                    top: 80px;
+                    right: -10px;
+                }
+                &_4 {
+                    right: -45px;
+                }
+            }
+        }
+    }
+    @media (max-width: $md4 + px) {
+        padding: 25px 0 15px 0;
+        &__box {
+            background: none;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        &__column {
+            padding: 0;
+        }
+        &__pic {
+            margin: 0 0 20px 0;
+            &_1 {
+                margin: 0 0 90px 0;
+            }
+            &_4 {
+                margin: 0 0 10px 0;
+            }
+        }
+    }
 }
 //=======================================================================
 .projects {
+    flex: 0 0 auto;
     background: rgba(249, 249, 249, 1) url('../img/projects_bg_1.svg') top right 76px/auto 100% no-repeat;
     padding: 141px 0 127px 0;
     &__head {
         margin: 0 0 59px 0;
-        padding: 0 0 0 130px;
     }
     &__title {
         margin: 0 0 16px 0;
@@ -494,24 +634,25 @@ body {
     }
     &__main {
         display: flex;
+        justify-content: space-between;
     }
     &__item {
         &_1 {
             background: url('../img/projects_bg_2.svg')  50% 320px/304px auto no-repeat;
             padding: 410px 0 0 0;
-            margin: 0 20px 0 0;
+            margin: 0 .84% 0 0;
         }
         &_2 {
-            margin: 0 62px 0 0;
+            margin: 0 5.2% 0 0;
         }
         &_3 {
             background: url('../img/projects_bg_3.svg') 0 0/351px 685px no-repeat;
-            padding: 260px 0 0 79px;
+            padding: 260px 0 0 6.6%;
         }
     }
     .item {
         &__pic {
-            width: 345px;
+            width: 100%;
             height: auto;
             margin: 0 0 16px 0;
             img {
@@ -541,14 +682,42 @@ body {
             color: rgba(38, 38, 38, 1);
         }
     }
+    @media (max-width: $md2 + px) {
+        padding: 45px 0 70px 0;
+        &__head {
+            margin: 0 0 50px 0;
+        }
+    }
+    @media (max-width: $md3 + px) {
+        background: none;
+        padding: 25px 0 30px 0;
+        &__head {
+            margin: 0 0 40px 0;
+        }
+        &__main {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item {
+            width: 70%;
+            padding: 0;
+            margin: 0 0 40px 0;
+            background: none;
+        }
+        .item {
+            &__pic {
+                margin: 0 0 10px 0;
+            }
+        }
+    }
 }
 //=======================================================================
 .media {
+    flex: 0 0 auto;
     background: url('../img/media_bg.svg') 150.5px 0/249.5px auto no-repeat;
     padding: 141px 0 114px 0;
     &__head {
         margin: 0 0 25px 0;
-        padding: 0 0 0 130px;
     }
     &__title {
         margin: 0 0 16px 0;
@@ -583,11 +752,11 @@ body {
 }
 //=======================================================================
 .like {
+    flex: 0 0 auto;
     background: url('../img/like_bg.svg') 90% 0/114.25px auto no-repeat;
     padding: 86px 0 127px 0;
     &__head {
         margin: 0 0 58px 0;
-        padding: 0 0 0 130px;
     }
     &__title {
         margin: 0 0 16px 0;
