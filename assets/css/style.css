@@ -118,14 +118,15 @@ body {
     border-radius: 10px;
     -webkit-transition: background .3s ease-in 0s;
     transition: background .3s ease-in 0s; }
-    .up__link:hover {
-      background: rgba(231, 231, 231, 0.5); }
   .up img {
     width: 40px;
     height: 40px; }
   .up.shown {
     visibility: visible;
     opacity: 1; }
+  @media (min-width: 767.99px) {
+    .up__link:hover {
+      background: rgba(231, 231, 231, 0.5); } }
   @media (max-width: 767.98px) {
     .up__link {
       width: 45px;
