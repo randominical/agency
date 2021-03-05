@@ -17,3 +17,9 @@
     var BtnUp = document.querySelector('.up');
     window.addEventListener('scroll', trackScroll);
 })();
+
+//wow
+wow = new WOW({
+    offset: 3,          // not default
+  })
+  wow.init();
